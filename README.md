@@ -37,11 +37,13 @@
 ###  Address already in use: JVM_Bind" error?
 
 <div id="2">
-    <pre>
-        If you know what port the process is running you can type: lsof -i:<port>.
-        For instance, lsof -i:8080, to list the process (pid) running on port 8080.
-        Then kill the process with kill <pid>
-    </pre>
+    
+        If you know what port the process is running you can type: <pre>lsof -i:port_number</pre>.
+        For instance, <pre> lsof -i:8080 </pre>, to list the process (pid) running on port 8080.
+        Then kill the process with </pre> kill <pid> </pre>
+    
+    Ex:
+
 </div>
  
  https://stackoverflow.com/questions/12737293/how-do-i-resolve-the-java-net-bindexception-address-already-in-use-jvm-bind
