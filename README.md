@@ -15,16 +15,20 @@
 
 <div id="1">
     ### The src/resources/application.yml file, and how to fix 'Could not resolve placeholder ${salt}' type errors
-</div>
 
+
+```java
  @Value("${salt}")
   private String salt;
+```
 
-<dependency>
-    <groupId>org.yaml</groupId>
-    <artifactId>snakeyaml</artifactId>
-</dependency>
-
+```xml
+    <dependency>
+        <groupId>org.yaml</groupId>
+        <artifactId>snakeyaml</artifactId>
+    </dependency>
+```
+</div>
 ############################################################################
 
 Address already in use: JVM_Bind" error?
