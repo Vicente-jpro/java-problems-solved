@@ -85,12 +85,11 @@ Relying upon circular references is discouraged and they are prohibited by defau
 
 
 SOLUTION:
-https://stackoverflow.com/questions/71867218/relying-upon-circular-reference-is-discouraged-and-they-are-prohibited-by-defaul
+<a href="
+https://stackoverflow.com/questions/71867218/relying-upon-circular-reference-is-discouraged-and-they-are-prohibited-by-defaul">stackoverflow</a>
 Add it to file application.properties
 
 spring.main.allow-circular-references=true
-###############################################################################
-
 </pre>
 
 
