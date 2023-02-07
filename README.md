@@ -1,5 +1,9 @@
 <ol>
-    <li id="#1">The src/resources/application.yml file, and how to fix 'Could not resolve placeholder ${salt}' type errors</li>
+    <li> 
+        <a href="#1">
+        The src/resources/application.yml file, and how to fix 'Could not resolve placeholder ${salt}' type errors
+        </a>
+    </li>
     <li></li>
     <li></li>
     <li></li>
