@@ -14,8 +14,9 @@
 <a href="https://jdk.java.net/archive/">Download JDK here.</a>
 
 <div id="1">
+```md
     ### The src/resources/application.yml file, and how to fix 'Could not resolve placeholder ${salt}' type errors
-
+```
 
 ```java
  @Value("${salt}")
