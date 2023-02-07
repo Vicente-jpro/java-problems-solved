@@ -15,11 +15,13 @@
         </a>
     </li>
     <li>
-        <a href="#3">
+        <a href="https://github.com/Vicente-jpro/java-problems-solved/blob/main/application.properties">
             Database connection
         </a>
     </li>
-    <li></li>
+    <li>
+        <a href="#5"> Hibernate Error executing DDL via JDBC Statement</a>
+    </li>
     <li></li>
 </ol>
 
@@ -52,32 +54,19 @@
     </pre>
 </div>
  
-<div id="3">
- ```properties
-    
-    
+<div id="4">
 
- ```
+    <a href="https://stackoverflow.com/questions/43191294/hibernate-error-executing-ddl-via-jdbc-statement"> Hibernate Error executing DDL via JDBC Statement </a>
+Adding this configuration in application.properties file to fixed this issue easily.
+<pre> spring.jpa.properties.hibernate.globally_quoted_identifiers=true </pre>
 </div>
 
- 
 
+<div id="5">
 
-###########################################################################
- H2 database connection
-application:
-  name: TEST ENVIROMENT
-  
+</div>
 
-###############################################################################
-Hibernate Error executing DDL via JDBC Statement
-
-https://stackoverflow.com/questions/43191294/hibernate-error-executing-ddl-via-jdbc-statement
-Adding this configuration in application.properties file to fixed this issue easily.
-
-spring.jpa.properties.hibernate.globally_quoted_identifiers=true
-################################################################################
-
+<pre>
 ERROR TYPE
 Description:
 
@@ -102,7 +91,7 @@ Add it to file application.properties
 spring.main.allow-circular-references=true
 ###############################################################################
 
-
+</pre>
 
 
 
