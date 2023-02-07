@@ -9,8 +9,16 @@
             Address already in use: JVM_Bind" error?
         </a>
     </li>
-    <li></li>
-    <li></li>
+    <li>
+        <a href="https://www.digitalocean.com/community/tutorials/install-maven-linux-ubuntu">
+            How to Install Maven on Linux (Ubuntu)
+        </a>
+    </li>
+    <li>
+        <a href="#3">
+            Database connection
+        </a>
+    </li>
     <li></li>
     <li></li>
 </ol>
@@ -35,22 +43,24 @@
 </div>
 
 ###  Address already in use: JVM_Bind" error?
-
+ https://stackoverflow.com/questions/12737293/how-do-i-resolve-the-java-net-bindexception-address-already-in-use-jvm-bind
 <div id="2">
     <pre>
-        If you know what port the process is running you can type: lsof -i:<port>.
+        If you know what port the process is running you can type: lsof -i:port.
         For instance, lsof -i:8080, to list the process (pid) running on port 8080.
-        Then kill the process with kill <pid>
+        Then kill the process with kill pid
     </pre>
 </div>
  
- https://stackoverflow.com/questions/12737293/how-do-i-resolve-the-java-net-bindexception-address-already-in-use-jvm-bind
+<div id="3">
+ ```properties
+    
+    
 
-##########################################################################
+ ```
+</div>
 
-
-How to Install Maven on Linux (Ubuntu)
- https://www.digitalocean.com/community/tutorials/install-maven-linux-ubuntu
+ 
 
 
 ###########################################################################
@@ -58,31 +68,7 @@ How to Install Maven on Linux (Ubuntu)
 application:
   name: TEST ENVIROMENT
   
-spring:
-  datasource:
-    url: jdbc:h2:mem:testdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: password
-  
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-  
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
-      
-# Dependencies
-#    <dependency>
-#      <groupId>org.springframework.boot</groupId>
-#      <artifactId>spring-boot-starter-data-jpa</artifactId>
-#    </dependency>
-#    
-#    <dependency>
-#      <groupId>com.h2database</groupId>
-#      <artifactId>h2</artifactId>
-#    </dependency>
+
 ###############################################################################
 Hibernate Error executing DDL via JDBC Statement
 
