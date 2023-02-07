@@ -4,7 +4,11 @@
         The src/resources/application.yml file, and how to fix 'Could not resolve placeholder ${salt}' type errors
         </a>
     </li>
-    <li></li>
+    <li>
+        <a href="#2">
+            Address already in use: JVM_Bind" error?
+        </a>
+    </li>
     <li></li>
     <li></li>
     <li></li>
@@ -13,10 +17,9 @@
 
 <a href="https://jdk.java.net/archive/">Download JDK here.</a>
 
+### The src/resources/application.yml file, and how to fix 'Could not resolve placeholder ${salt}' type errors
+
 <div id="1">
-```md
-    ### The src/resources/application.yml file, and how to fix 'Could not resolve placeholder ${salt}' type errors
-```
 
 ```java
  @Value("${salt}")
@@ -30,15 +33,16 @@
     </dependency>
 ```
 </div>
-############################################################################
 
-Address already in use: JVM_Bind" error?
- 
-If you know what port the process is running you can type: lsof -i:<port>.
+###  Address already in use: JVM_Bind" error?
 
-For instance, lsof -i:8080, to list the process (pid) running on port 8080.
-
-Then kill the process with kill <pid>
+<div id="2">
+    <pre>
+        If you know what port the process is running you can type: lsof -i:<port>.
+        For instance, lsof -i:8080, to list the process (pid) running on port 8080.
+        Then kill the process with kill <pid>
+    </pre>
+</div>
  
  https://stackoverflow.com/questions/12737293/how-do-i-resolve-the-java-net-bindexception-address-already-in-use-jvm-bind
 
