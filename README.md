@@ -22,7 +22,7 @@
     <li>
         <a href="#5"> Hibernate Error executing DDL via JDBC Statement</a>
     </li>
-    <li></li>
+    <li><a href="#6"> Create a jar or warm using maving</a></li>
 </ol>
 
 <a href="https://jdk.java.net/archive/">Download JDK here.</a>
@@ -92,5 +92,15 @@ Add it to file application.properties
 spring.main.allow-circular-references=true
 </pre>
 
+<div id="6">
+First go into to your /project-folder
+Them run de command
 
+```bach
+
+./mvnw clean package 
+
+```
+
+</div>
 
