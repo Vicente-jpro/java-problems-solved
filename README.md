@@ -99,7 +99,7 @@ Them run de command
 ```bach
 
 ./mvnw clean package 
-
+java -jar ./target/project-name.jar 
 ```
 
 </div>
