@@ -94,13 +94,19 @@ spring.main.allow-circular-references=true
 
 <div id="6">
 First go into to your /project-folder
-Them run de command
+Them run de commands in your terminal
 
+<pre>
+Clean package and create a .jar file
+</pre>
 ```bach
 
 ./mvnw clean package 
+```
+<pre>Execute file .jar created</pre>
+
+```bach
 java -jar ./target/project-name.jar 
 ```
-
 </div>
 
