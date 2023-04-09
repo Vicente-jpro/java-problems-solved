@@ -27,18 +27,12 @@
             <a href="#7"> Field authenticationManager in com.example.configurations.AuthorizationServerConfig required a bean of type '       org.springframework.security.authentication.AuthenticationManager' that could not be found..</a>
     </li>
     
-    <li>
-    <a href="#8"> 
+    <li><a href="#8">
     Field passwordEncoder in com.example.services.UsuarioService required a bean of type 
-    'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
-    </a>
-    </li>
-        <li>
-    <a href="#8"> 
-    Field passwordEncoder in com.example.services.UsuarioService required a bean of type 
-    'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
-    </a>
-    </li>
+    'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.</a></li>
+    
+ 
+ 
 </ol>
 
 
