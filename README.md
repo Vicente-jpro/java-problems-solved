@@ -23,7 +23,9 @@
         <a href="#5"> Hibernate Error executing DDL via JDBC Statement</a>
     </li>
     <li><a href="#6"> Create a jar or warm using maving</a></li>
+    <li><a href="#7"> Field passwordEncoder in com.example.services.UsuarioService required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.</a></li>
 </ol>
+
 
 <a href="https://jdk.java.net/archive/">Download JDK here.</a>
 
@@ -110,6 +112,9 @@ java -jar ./target/project-name.jar
 ```
 </div>
 
+### Field passwordEncoder in com.example.services.UsuarioService required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+<div id="7">
 ```bash
 
 ***************************
@@ -129,3 +134,4 @@ Action:
 Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
 
 ```
+<div>
