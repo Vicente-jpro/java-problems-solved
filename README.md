@@ -27,6 +27,7 @@
             <a href="#7"> Field authenticationManager in com.example.configurations.AuthorizationServerConfig required a bean of type '       org.springframework.security.authentication.AuthenticationManager' that could not be found..</a>
     </li>
     
+    <li><a href="#6"> Create a jar or warm using maving</a></li>
     <li><a href="#8">
     Field passwordEncoder in com.example.services.UsuarioService required a bean of type 
     'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.</a></li>
