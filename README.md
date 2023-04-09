@@ -23,8 +23,11 @@
         <a href="#5"> Hibernate Error executing DDL via JDBC Statement</a>
     </li>
     <li><a href="#6"> Create a jar or warm using maving</a></li>
-    <li><a href="#7"> Field passwordEncoder in com.example.services.UsuarioService required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.</a></li>
+        <li><a href="#7"> Field authenticationManager in com.example.configurations.AuthorizationServerConfig required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found..</a></li>
+    
+    <li><a href="#8"> Field passwordEncoder in com.example.services.UsuarioService required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.</a></li>
 </ol>
+
 
 
 <a href="https://jdk.java.net/archive/">Download JDK here.</a>
@@ -112,9 +115,63 @@ java -jar ./target/project-name.jar
 ```
 </div>
 
-### Field passwordEncoder in com.example.services.UsuarioService required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+
+
+
+
+
+### Field authenticationManager in com.example.configurations.AuthorizationServerConfig required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found.
 
 <div id="7">
+
+ ```java
+
+@SuppressWarnings("deprecation")
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    // ADD this method to your code
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManager() throws Exception {
+        return super.authenticationManager();
+    }
+
+}
+ 
+ ```
+ 
+    
+```bash
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field authenticationManager in com.example.configurations.AuthorizationServerConfig required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found.
+
+The injection point has the following annotations:
+        - @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.authentication.AuthenticationManager' in your configuration.
+
+```
+</div>
+
+
+
+
+
+
+### Field passwordEncoder in com.example.services.UsuarioService required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+<div id="8">
 
  ```java
 
@@ -154,3 +211,5 @@ Consider defining a bean of type 'org.springframework.security.crypto.password.P
 
 ```
 </div>
+
+
