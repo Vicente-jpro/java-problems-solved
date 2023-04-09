@@ -115,6 +115,25 @@ java -jar ./target/project-name.jar
 ### Field passwordEncoder in com.example.services.UsuarioService required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
 
 <div id="7">
+
+ ```java
+
+@SuppressWarnings("deprecation")
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    // ADD this method to your code
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManager() throws Exception {
+        return super.authenticationManager();
+    }
+
+}
+ 
+ ```
+ 
+    
 ```bash
 
 ***************************
@@ -134,4 +153,4 @@ Action:
 Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
 
 ```
-<div>
+</div>
