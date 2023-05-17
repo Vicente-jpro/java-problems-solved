@@ -9,6 +9,12 @@
 void update(@Param("name") String name, @Param("id") Integer id);
 
 // Pagination
+
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
+
     @GetMapping
     @ApiOperation("Listar todos os colaboradores.")
     @ApiResponses({
