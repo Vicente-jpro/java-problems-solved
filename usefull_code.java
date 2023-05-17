@@ -1,5 +1,5 @@
 
-## Modificar o update
+// Modificar o update
 @Modifying
 @Transactional
 @Query(
@@ -8,7 +8,7 @@
 )
 void update(@Param("name") String name, @Param("id") Integer id);
 
-## Pagination
+// Pagination
     @GetMapping
     @ApiOperation("Listar todos os colaboradores.")
     @ApiResponses({
