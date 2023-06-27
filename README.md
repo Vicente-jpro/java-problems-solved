@@ -239,6 +239,25 @@ Change and put the vertion you want.
       ]
 }
 
-``` 
+```
+
+### Run Spring Boot application in terminal using maven.
+Go into the `your-project-folder/` then run the command:
+```bash
+./mvnw spring-application:run
+```
+
+### Create a .jar file in Spring Boot application in terminal using maven.
+Go into the `your-project-folder/` then run the command:
+```bash
+./mvnw clean package
+```
+
+### Run a .jar Spring Boot application in terminal using maven.
+After created a .jar file in Spring Boot application in terminal using maven
+Go into the `your-project-folder/target/` then run the command:
+```bash
+java -jar project-name.jar 
+```
 
 
