@@ -244,7 +244,7 @@ Change and put the vertion you want.
 ### Run Spring Boot application in terminal using maven.
 Go into the `your-project-folder/` then run the command:
 ```bash
-./mvnw spring-application:run
+./mvnw spring-boot:run
 ```
 
 ### Create a .jar file in Spring Boot application in terminal using maven.
