@@ -220,4 +220,25 @@ Consider defining a bean of type 'org.springframework.security.crypto.password.P
 ```
 </div>
 
+### Change java compile version in VS CODE
+First you have to access the file `settings.json` then add this `JSON` code in the file `settings.json`. 
+Change and put the vertion you want.
+```json
+{
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-1.8",
+          "path": "/usr/lib/jvm/java-8-openjdk-amd64",
+          "sources" : "/usr/lib/jvm/java-8-openjdk-amd64/src.zip",
+          "javadoc" : "https://docs.oracle.com/javase/8/docs/api",
+          "default":  true
+         },
+         
+      ]
+}
+
+``` 
+
 
