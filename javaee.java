@@ -4,3 +4,7 @@ https://stackoverflow.com/questions/22658185/java-lang-classnotfoundexception-ja
 
 # JSF tag is no showing
 https://www.tutorialspoint.com/jsf/jsf_first_application.html
+
+
+# Livros de JAVA EE  e JAVA SPRING BOOT 
+https://pt.z-library.se/book/2730098/c468ee
