@@ -9,3 +9,6 @@ https://stackoverflow.com/questions/9612941/how-to-set-java-environment-path-in-
 
 Interview questions
 https://www.youtube.com/watch?v=kJp8BiEq-P8&list=PLSa9-rMh6lhEE-iGkvLGXio1_h29OMVZp&index=8
+
+Microservicos teoria
+https://martinfowler.com/articles/microservices.html
