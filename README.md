@@ -123,7 +123,12 @@ java -jar ./target/project-name.jar
 ```
 </div>
 
-
+<pre>
+bash: ./mvnw: Permissão negada
+</pre>
+```bach
+chmod +x mvnw
+```
 
 
 
