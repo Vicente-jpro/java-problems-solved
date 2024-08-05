@@ -114,7 +114,7 @@ Clean package and create a .jar file
 </pre>
 ```bach
 
-./mvnw clean package 
+./mvnw clean package -DskipTests
 ```
 <pre>Execute file .jar created</pre>
 
