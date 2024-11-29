@@ -266,3 +266,132 @@ java -jar project-name.jar
 ```
 
 
+When naming tests in Java using Mockito (or any testing framework), it is essential to follow clear, consistent, and descriptive conventions. This helps in understanding the purpose of the test, what is being mocked, and the expected outcome. Here are some best practices for naming tests that use Mockito:
+
+### 1. **Test Method Naming Convention**
+The most commonly used convention is:
+
+`<MethodBeingTested>_<ConditionUnderTest>_<ExpectedBehavior>`
+
+- **MethodBeingTested**: The name of the method you're testing.
+- **ConditionUnderTest**: The scenario or condition you're testing for (e.g., specific input, state).
+- **ExpectedBehavior**: The behavior or outcome you expect from the method.
+
+### 2. **Example Test Names**
+
+Here are some examples to clarify this naming convention:
+
+#### Example 1: Testing a Service Method with a Mocked Dependency
+Assume you have a `UserService` class that depends on a `UserRepository`. You want to test the `getUserById()` method of `UserService`, which returns a user by their ID.
+
+```java
+@Test
+void getUserById_userExists_returnsUser() {
+    // Test code here
+}
+```
+- **MethodBeingTested**: `getUserById`
+- **ConditionUnderTest**: `userExists`
+- **ExpectedBehavior**: `returnsUser`
+
+#### Example 2: Testing a Service Method with a Mocked Dependency for an Exception
+Assume the `UserService`'s `getUserById()` method throws an exception if the user is not found.
+
+```java
+@Test
+void getUserById_userNotFound_throwsUserNotFoundException() {
+    // Test code here
+}
+```
+- **MethodBeingTested**: `getUserById`
+- **ConditionUnderTest**: `userNotFound`
+- **ExpectedBehavior**: `throwsUserNotFoundException`
+
+#### Example 3: Testing with a Mocked Return Value
+Imagine a `ProductService` that interacts with a `ProductRepository`, and you want to test if the `getProduct()` method returns a mocked product.
+
+```java
+@Test
+void getProduct_productIdExists_returnsMockedProduct() {
+    // Test code here
+}
+```
+- **MethodBeingTested**: `getProduct`
+- **ConditionUnderTest**: `productIdExists`
+- **ExpectedBehavior**: `returnsMockedProduct`
+
+### 3. **Mockito-Specific Test Naming**
+
+When using Mockito to mock dependencies, you can specify the expected behavior in the mock and then name the test accordingly:
+
+#### Example 4: Mocking a Method Call and Verifying Behavior
+Let's say you are testing a `PaymentService` that uses a `PaymentGateway` mock to simulate a successful payment:
+
+```java
+@Test
+void processPayment_paymentSuccessful_returnsConfirmation() {
+    // Arrange: Set up mock behavior
+    when(paymentGateway.process(any(Payment.class))).thenReturn(true);
+
+    // Act: Call the method under test
+    boolean result = paymentService.processPayment(new Payment());
+
+    // Assert: Verify result
+    assertTrue(result);
+}
+```
+- **MethodBeingTested**: `processPayment`
+- **ConditionUnderTest**: `paymentSuccessful`
+- **ExpectedBehavior**: `returnsConfirmation`
+
+#### Example 5: Verifying Interactions with a Mock
+Suppose you have a method that updates a user's profile, and you're verifying that the `saveUserProfile` method is called.
+
+```java
+@Test
+void updateUserProfile_userProfileUpdated_callsSaveUserProfile() {
+    // Arrange: Set up mock behavior
+    User user = new User();
+    when(userRepository.save(any(User.class))).thenReturn(user);
+
+    // Act: Call the method under test
+    userService.updateUserProfile(user);
+
+    // Assert: Verify interactions
+    verify(userRepository, times(1)).save(user);
+}
+```
+- **MethodBeingTested**: `updateUserProfile`
+- **ConditionUnderTest**: `userProfileUpdated`
+- **ExpectedBehavior**: `callsSaveUserProfile`
+
+### 4. **Edge Cases & Negative Tests**
+
+It's also useful to name tests for edge cases or negative scenarios clearly.
+
+#### Example 6: Testing Invalid Input
+If your method should throw an exception when given invalid input, name it accordingly:
+
+```java
+@Test
+void registerUser_invalidEmail_throwsInvalidEmailException() {
+    // Test code here
+}
+```
+- **MethodBeingTested**: `registerUser`
+- **ConditionUnderTest**: `invalidEmail`
+- **ExpectedBehavior**: `throwsInvalidEmailException`
+
+### 5. **Other Useful Naming Patterns**
+Here are additional naming patterns based on different test conditions:
+
+- **When <something> happens, <expect something>**
+  - `whenUserExists_returnsUserDetails()`
+  - `whenPaymentFails_throwsPaymentFailedException()`
+- **<MethodBeingTested>_<ExpectedOutcome>**
+  - `getUserById_returnsUserNotFoundException()`
+  - `addProductToCart_productIsAddedSuccessfully()`
+
+### Conclusion
+Naming your tests with clear, descriptive, and consistent names makes it easier to understand the test's purpose, especially when using mocking frameworks like Mockito. Follow these naming conventions to improve readability, maintainability, and clarity of your unit tests.
+
