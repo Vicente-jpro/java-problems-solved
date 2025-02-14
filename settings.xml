@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <localRepository>C:\Users\vicente\.m2\repository</localRepository>
+
+    <servers>
+        <server>
+            <id>central-repo</id>
+            <username>vicente</username>
+            <password>user-repository-organization-password</password>
+        </server>
+        <server>
+            <id>release-repo</id>
+            <username>vicente</username>
+            <password>user-repository-organization-password</password>
+        </server>
+        <server>
+            <id>thirdparty-repo</id>
+            <username>vicente</username>
+            <password>user-repository-organization-password</password>
+        </server>
+        <server>
+            <id>snapshot-repo</id>
+            <username>vicente</username>
+            <password>user-repository-organization-password</password>
+        </server>
+    </servers>
+
+  <mirrors>
+    <!-- Mirror for central -->
+    <mirror>
+      <id>central-repo</id>
+      <url>https://domain.com/repository/central</url>
+	  <mirrorOf>
+        central,external:*,!repo-release,!repo-thirdparty,!repo-snapshot
+      </mirrorOf>
+    </mirror>
+    <!-- Mirror for releases -->
+    <mirror>
+      <id>release-repo</id>
+      <mirrorOf>releases</mirrorOf>
+      <url>https://domain.comt/repository/release</url>
+    </mirror>
+    <!-- Mirror for thirdparty -->
+    <mirror>
+      <id>thirdparty-repo</id>
+      <mirrorOf>thirdparty</mirrorOf>
+      <url>https://domain.com/repository/thirdparty</url>
+    </mirror>
+    <!-- Mirror for snapshots -->
+    <mirror>
+      <id>snapshot-repo</id>
+      <mirrorOf>snapshots</mirrorOf>
+      <url>https://domain.com/repository/snapshot</url>
+    </mirror>
+  </mirrors>
+  <!-- Profiles Section -->
+  <profiles>
+    <!-- Generic profile for central, release, and thirdparty -->
+    <profile>
+      <id>generic</id>
+      <repositories>
+        <repository>
+          <id>central-repo</id>
+          <url>https://domain.com/repository/central</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>release-repo</id>
+          <url>https://domain.com/repository/release</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>thirdparty-repo</id>
+          <url>https://domain.com/repository/thirdparty</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+
+    <!-- Profile for snapshot repository -->
+    <profile>
+      <id>snapshot-profile</id>
+      <repositories>
+        <repository>
+          <id>snapshot-repo</id>
+          <url>https://domain.com/repository/snapshot</url>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
+  <!-- Active Profiles Section -->
+  <activeProfiles>
+    <activeProfile>generic</activeProfile> <!-- Activate the generic profile by default -->
+    <activeProfile>snapshot-profile</activeProfile> <!-- Activate the generic profile by default -->
+  </activeProfiles>
+</settings>
