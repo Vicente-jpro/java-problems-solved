@@ -4,6 +4,7 @@
         The src/resources/application.yml file, and how to fix 'Could not resolve placeholder ${salt}' type errors
         </a>
     </li>
+    
     <li>
         <a href="#2">
             Address already in use: JVM_Bind" error?
@@ -394,4 +395,11 @@ Here are additional naming patterns based on different test conditions:
 
 ### Conclusion
 Naming your tests with clear, descriptive, and consistent names makes it easier to understand the test's purpose, especially when using mocking frameworks like Mockito. Follow these naming conventions to improve readability, maintainability, and clarity of your unit tests.
+
+    
+    <li>
+        <a href="https://github.com/cxxr/better-java">
+            Better java code
+        </a>
+    </li>
 
