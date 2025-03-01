@@ -396,7 +396,7 @@ Here are additional naming patterns based on different test conditions:
 ### Conclusion
 Naming your tests with clear, descriptive, and consistent names makes it easier to understand the test's purpose, especially when using mocking frameworks like Mockito. Follow these naming conventions to improve readability, maintainability, and clarity of your unit tests.
 
-    
+## Links to study
 
 <a href="https://github.com/cxxr/better-java">Better java code</a>
 
